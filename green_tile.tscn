@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3n38f024lp28"]
+
+[ext_resource type="Texture2D" uid="uid://dyy4vkugdt1rf" path="res://Sprite-0001.png" id="1_vmipx"]
+
+[node name="GreenTile" type="Node2D" groups=["BasicTile"]]
+
+[node name="GreenTileSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_vmipx")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+clip_text = true

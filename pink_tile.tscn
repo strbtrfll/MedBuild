@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv8jl3bv5l2jx"]
+
+[ext_resource type="Texture2D" uid="uid://bv8sceihksb3u" path="res://Sprite-0002.png" id="1_sjnmx"]
+
+[node name="PinkTile" type="Node2D" groups=["BasicTile"]]
+
+[node name="PinkTileSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_sjnmx")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
