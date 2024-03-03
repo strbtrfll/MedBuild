@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://limovf4km1la"]
+[gd_scene load_steps=3 format=3 uid="uid://limovf4km1la"]
 
 [ext_resource type="Texture2D" uid="uid://dku6xxnk1h8md" path="res://icon.svg" id="1_y7u5f"]
+[ext_resource type="Texture2D" uid="uid://dyy4vkugdt1rf" path="res://Sprite-0001.png" id="2_0kwar"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,3 +21,11 @@ texture = ExtResource("1_y7u5f")
 position = Vector2(256, 992)
 scale = Vector2(4, 0.5)
 texture = ExtResource("1_y7u5f")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(64, 128)
+texture = ExtResource("1_y7u5f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 896)
+texture = ExtResource("2_0kwar")
