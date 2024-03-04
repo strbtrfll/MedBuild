@@ -15,7 +15,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TileSheet" type="TextureRect" parent="UI" groups=["TileSheet"]]
-visible = false
 top_level = true
 layout_mode = 0
 offset_left = 64.0

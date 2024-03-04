@@ -9,11 +9,12 @@ script = ExtResource("1_uee71")
 [node name="GreenTileSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_vmipx")
 
-[node name="Button" type="Button" parent="."]
+[node name="GreenButton" type="Button" parent="."]
 offset_left = -64.0
 offset_top = -64.0
 offset_right = 64.0
 offset_bottom = 64.0
+flat = true
 clip_text = true
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GreenButton" to="." method="_on_button_pressed"]
