@@ -5,8 +5,11 @@ var orange_tile = preload("res://orange_tile.tscn")
 var pink_tile = preload("res://pink_tile.tscn")
 var red_tile = preload("res://red_t_ile.tscn")
 
+
 var tile_prefabs : Array = []
 var positions : Array = []
+
+
 
 
 func _ready():
