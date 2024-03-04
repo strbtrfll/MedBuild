@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctqnplq2i8at6"]
+[gd_scene load_steps=3 format=3 uid="uid://ctqnplq2i8at6"]
 
 [ext_resource type="Texture2D" uid="uid://dk4f375h3bhla" path="res://Sprite-0003.png" id="1_scdbl"]
+[ext_resource type="Script" path="res://red_t_ile.gd" id="1_xa3ex"]
 
 [node name="RedTile" type="Node2D" groups=["BasicTile"]]
+script = ExtResource("1_xa3ex")
 
 [node name="RedTileSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_scdbl")
@@ -12,3 +14,5 @@ offset_left = -64.0
 offset_top = -64.0
 offset_right = 64.0
 offset_bottom = 64.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -6,26 +6,27 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_top = 64.0
+offset_top = 128.0
 offset_right = 512.0
-offset_bottom = 960.0
+offset_bottom = 896.0
 texture = ExtResource("1_y7u5f")
 stretch_mode = 1
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(256, 32)
-scale = Vector2(4, 0.5)
+position = Vector2(256, 64)
+scale = Vector2(4, 1)
 texture = ExtResource("1_y7u5f")
 
 [node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(256, 992)
-scale = Vector2(4, 0.5)
+position = Vector2(256, 960)
+scale = Vector2(4, 1)
 texture = ExtResource("1_y7u5f")
 
 [node name="Icon3" type="Sprite2D" parent="."]
-position = Vector2(64, 128)
+position = Vector2(64, 192)
 texture = ExtResource("1_y7u5f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(64, 896)
+position = Vector2(64, 64)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_0kwar")

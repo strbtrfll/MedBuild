@@ -1,6 +1,146 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4c0pihu4baef"]
+[gd_scene load_steps=4 format=3 uid="uid://b4c0pihu4baef"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_grak8"]
+[ext_resource type="Texture2D" uid="uid://dyy4vkugdt1rf" path="res://Sprite-0001.png" id="2_dk0i3"]
+[ext_resource type="Script" path="res://TileSheet.gd" id="3_ylsq1"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grak8")
+
+[node name="UI" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TileSheet" type="TextureRect" parent="UI" groups=["TileSheet"]]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 448.0
+offset_bottom = 576.0
+script = ExtResource("3_ylsq1")
+
+[node name="InfoLabel" type="Label" parent="UI/TileSheet"]
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 46
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="UI"]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 64.0
+
+[node name="ResoursesFolder" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Food" type="TextureRect" parent="UI/ResoursesFolder"]
+layout_mode = 0
+offset_left = 32.0
+offset_right = 96.0
+offset_bottom = 64.0
+texture = ExtResource("2_dk0i3")
+expand_mode = 1
+
+[node name="FoodScore" type="Label" parent="UI/ResoursesFolder/Food"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 63.0
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FoodLabel" type="Label" parent="UI/ResoursesFolder/Food"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 40.0
+text = "Food"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resourses" type="TextureRect" parent="UI/ResoursesFolder"]
+layout_mode = 0
+offset_left = 128.0
+offset_right = 192.0
+offset_bottom = 64.0
+texture = ExtResource("2_dk0i3")
+expand_mode = 1
+
+[node name="ResoursesScore" type="Label" parent="UI/ResoursesFolder/Resourses"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 63.0
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResoursesLabel" type="Label" parent="UI/ResoursesFolder/Resourses"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 40.0
+text = "Res"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Magic" type="TextureRect" parent="UI/ResoursesFolder"]
+layout_mode = 0
+offset_left = 224.0
+offset_right = 288.0
+offset_bottom = 64.0
+texture = ExtResource("2_dk0i3")
+expand_mode = 1
+
+[node name="MagicScore" type="Label" parent="UI/ResoursesFolder/Magic"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 63.0
+text = "25
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MagicLabel" type="Label" parent="UI/ResoursesFolder/Magic"]
+layout_mode = 0
+offset_left = -8.0
+offset_right = 71.0
+offset_bottom = 40.0
+text = "Magic"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Religion" type="TextureRect" parent="UI/ResoursesFolder"]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 384.0
+offset_bottom = 64.0
+texture = ExtResource("2_dk0i3")
+expand_mode = 1
+
+[node name="ReligionScore" type="Label" parent="UI/ResoursesFolder/Religion"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 63.0
+text = "25
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReligionLabel" type="Label" parent="UI/ResoursesFolder/Religion"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 40.0
+text = "Religion"
+horizontal_alignment = 1
+vertical_alignment = 1
