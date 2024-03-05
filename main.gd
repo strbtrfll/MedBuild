@@ -10,8 +10,6 @@ var tile_prefabs : Array = []
 var positions : Array = []
 
 
-
-
 func _ready():
 	MasPosition()
 	tile_prefabs.append(green_tile)
