@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://8slvqxi7upny"]
+[gd_scene load_steps=3 format=3 uid="uid://8slvqxi7upny"]
 
+[ext_resource type="Script" path="res://orange_tile.gd" id="1_24dj1"]
 [ext_resource type="Texture2D" uid="uid://c6hk61jlfeplm" path="res://Sprite-0004.png" id="1_vv8dn"]
 
 [node name="OrangeTile" type="Node2D" groups=["BasicTile"]]
+script = ExtResource("1_24dj1")
 
 [node name="OrangeTileSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_vv8dn")
@@ -13,3 +15,5 @@ offset_top = -64.0
 offset_right = 64.0
 offset_bottom = 64.0
 flat = true
+
+[connection signal="pressed" from="OrangeButton" to="." method="_on_orange_button_pressed"]

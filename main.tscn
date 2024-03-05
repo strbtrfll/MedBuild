@@ -15,6 +15,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TileSheet" type="TextureRect" parent="UI" groups=["TileSheet"]]
+visible = false
 top_level = true
 layout_mode = 0
 offset_left = 64.0
@@ -30,6 +31,7 @@ offset_bottom = 256.0
 theme_override_font_sizes/font_size = 46
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Panel" type="Panel" parent="UI"]
 layout_mode = 0
