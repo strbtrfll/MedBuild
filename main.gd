@@ -1,14 +1,21 @@
 extends Node2D
 
-var green_tile = preload("res://green_tile.tscn")
-var orange_tile = preload("res://orange_tile.tscn")
-var pink_tile = preload("res://pink_tile.tscn")
-var red_tile = preload("res://red_t_ile.tscn")
+#Файли
+var green_tile = preload("res://Tiles/Forest/Forest_tile.tscn")
+var orange_tile = preload("res://Tiles/Rock/Rock_tile.tscn")
+var pink_tile = preload("res://Tiles/Field/Field_tile.tscn")
+var red_tile = preload("res://Tiles/Lake/Lake_tile.tscn")
 
-
+#Масиви
 var tile_prefabs : Array = []
 var positions : Array = []
 
+#Керування
+var swipe_length = 50
+var start_pos : Vector2
+var curent_pos : Vector2
+var swiping : bool = false
+var swipe_treshhold = 10
 
 func _ready():
 	MasPosition()
@@ -17,6 +24,23 @@ func _ready():
 	tile_prefabs.append(pink_tile)
 	tile_prefabs.append(red_tile)
 	spawn_random_tile()
+
+#Свайп (де мій Вова коли він так потрібен)
+func _input(event):
+	if Input.is_action_just_pressed("press"):
+		if !swiping:
+			swiping = true
+			start_pos = get_global_mouse_position()
+	if Input.is_action_pressed("press"):
+		if swiping:
+			curent_pos = get_global_mouse_position()
+			if start_pos.distance_to(curent_pos) >= swipe_length:
+				if abs(start_pos.x - curent_pos.x) <= swipe_treshhold and curent_pos.y <= start_pos.y:
+					print("Start pos:", start_pos, "Current pos:", curent_pos)
+					$CastleCard.show()
+					swiping = false
+	else:
+		swiping = false
 
 func MasPosition():
 	var x = 64
