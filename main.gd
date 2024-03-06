@@ -37,7 +37,7 @@ func _input(event):
 			if start_pos.distance_to(curent_pos) >= swipe_length:
 				if abs(start_pos.x - curent_pos.x) <= swipe_treshhold and curent_pos.y <= start_pos.y:
 					print("Start pos:", start_pos, "Current pos:", curent_pos)
-					$CastleCard.show()
+					
 					swiping = false
 	else:
 		swiping = false

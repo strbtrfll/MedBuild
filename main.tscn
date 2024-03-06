@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4c0pihu4baef"]
+[gd_scene load_steps=7 format=3 uid="uid://b4c0pihu4baef"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_grak8"]
-[ext_resource type="Texture2D" uid="uid://dyy4vkugdt1rf" path="res://Sprite-0001.png" id="2_dk0i3"]
-[ext_resource type="Script" path="res://TileSheet.gd" id="3_ylsq1"]
-[ext_resource type="PackedScene" uid="uid://dvrt5bjdxq6bw" path="res://castle_card.tscn" id="4_7cun0"]
-[ext_resource type="Texture2D" uid="uid://bv8sceihksb3u" path="res://Sprite-0002.png" id="4_yimxe"]
-[ext_resource type="Texture2D" uid="uid://dk4f375h3bhla" path="res://Sprite-0003.png" id="5_4pfxi"]
-[ext_resource type="Texture2D" uid="uid://c6hk61jlfeplm" path="res://Sprite-0004.png" id="6_rlngk"]
+[ext_resource type="Texture2D" uid="uid://dyy4vkugdt1rf" path="res://UI/Sprite-0001.png" id="2_dk0i3"]
+[ext_resource type="Script" path="res://UI/TileSheet.gd" id="3_ylsq1"]
+[ext_resource type="Texture2D" uid="uid://bv8sceihksb3u" path="res://UI/Sprite-0002.png" id="4_yimxe"]
+[ext_resource type="Texture2D" uid="uid://dk4f375h3bhla" path="res://UI/Sprite-0003.png" id="5_4pfxi"]
+[ext_resource type="Texture2D" uid="uid://c6hk61jlfeplm" path="res://UI/Sprite-0004.png" id="6_rlngk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grak8")
@@ -160,7 +159,3 @@ theme_override_font_sizes/font_size = 20
 text = "Religion"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="CastleCard" parent="." instance=ExtResource("4_7cun0")]
-visible = false
-position = Vector2(256, 384)
