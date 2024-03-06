@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctqnplq2i8at6"]
+
+[ext_resource type="Script" path="res://Tiles/Lake/Lake_tile.gd" id="1_gcti8"]
+[ext_resource type="Texture2D" uid="uid://cnmagbm3cdmj0" path="res://Tiles/Lake/Lake_sprite.jpg" id="2_aue2j"]
+
+[node name="LakeTile" type="Node2D" groups=["BasicTile"]]
+script = ExtResource("1_gcti8")
+
+[node name="LakeTileSprite" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, -9.53674e-07)
+scale = Vector2(0.542373, 0.934307)
+texture = ExtResource("2_aue2j")
+
+[node name="LakeButton" type="Button" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+focus_mode = 0
+flat = true
+
+[connection signal="pressed" from="LakeButton" to="." method="_on_button_pressed"]

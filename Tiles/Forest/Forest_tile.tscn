@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3n38f024lp28"]
+
+[ext_resource type="Script" path="res://Tiles/Forest/Forest_tile.gd" id="1_e3hni"]
+[ext_resource type="Texture2D" uid="uid://cqhpreyl5tlcu" path="res://Tiles/Forest/Forest_sprite.jpg" id="2_2wf6b"]
+
+[node name="ForestTile" type="Node2D" groups=["BasicTile"]]
+script = ExtResource("1_e3hni")
+
+[node name="ForestTileSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 1.43051e-06)
+scale = Vector2(0.542373, 1.08475)
+texture = ExtResource("2_2wf6b")
+
+[node name="ForestButton" type="Button" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+focus_mode = 0
+flat = true
+clip_text = true
+
+[connection signal="pressed" from="ForestButton" to="." method="_on_button_pressed"]

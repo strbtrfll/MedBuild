@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://8slvqxi7upny"]
+
+[ext_resource type="Script" path="res://Tiles/Rock/Rock_tile.gd" id="1_fpe78"]
+[ext_resource type="Texture2D" uid="uid://qr4dsndkjjgu" path="res://Tiles/Rock/Rock_sprite.jpg" id="2_6gwv1"]
+
+[node name="RockTile" type="Node2D" groups=["BasicTile"]]
+script = ExtResource("1_fpe78")
+
+[node name="RockTileSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(0.542373, 0.836601)
+texture = ExtResource("2_6gwv1")
+
+[node name="RockButton" type="Button" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+focus_mode = 0
+flat = true
+
+[connection signal="pressed" from="RockButton" to="." method="_on_orange_button_pressed"]

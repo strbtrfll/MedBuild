@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv8jl3bv5l2jx"]
+
+[ext_resource type="Script" path="res://Tiles/Field/Field_tile.gd" id="1_osarh"]
+[ext_resource type="Texture2D" uid="uid://db2pbl4x04drg" path="res://Tiles/Field/Field_sprite.jpg" id="2_a45ge"]
+
+[node name="FieldTile" type="Node2D" groups=["BasicTile"]]
+script = ExtResource("1_osarh")
+
+[node name="FieldTileSprite" type="Sprite2D" parent="."]
+position = Vector2(-7.62939e-06, 0)
+scale = Vector2(0.22695, 0.392638)
+texture = ExtResource("2_a45ge")
+
+[node name="FieldButton" type="Button" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+focus_mode = 0
+flat = true
+
+[connection signal="pressed" from="FieldButton" to="." method="_on_button_pressed"]
